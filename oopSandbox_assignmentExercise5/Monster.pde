@@ -15,8 +15,8 @@ class Monster {
     // this ensures better use and control of variables - ie, what can
     // change a variable and what can't at any given time
 
-    skin1 = sk1;
-    skin2 = sk2;
+    skin1 = sk1 = color(50, 148, 240);
+    skin2 = sk2 = color(100, 100, 200);
     wart = wart_;
     x = tempX;
     y = tempY;

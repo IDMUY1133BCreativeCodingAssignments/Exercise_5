@@ -26,15 +26,15 @@ void setup(){
 }
 
 void draw(){
-  fred = new Monster(100,400,200,200,200);
+  fred = new Monster(100,400, sk1, sk2, wart_);
   fred.monsterBody(20,20);
-  jerry = new Monster(200,400,10,10,10);
+  jerry = new Monster(200,400,sk1,sk2,wart_);
   jerry.monsterBody(50,50);
-  ronda = new Monster(300,400,50,50,50);
+  ronda = new Monster(300,400,sk1,sk2,wart_);
   ronda.monsterBody(100,100);
-  ted = new Monster(450,400,70,70,70);
+  ted = new Monster(450,400,sk1,sk2,wart_);
   ted.monsterBody(150,150);
-  wanda = new Monster(600,400,100,100,100);
+  wanda = new Monster(600,400,sk1,sk2,wart_);
   wanda.monsterBody(200,200);
   
 }
