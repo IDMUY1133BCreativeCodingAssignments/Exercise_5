@@ -12,20 +12,29 @@ Make multiple and different monsters. Add functionality to them (and your code!)
 
 */
 
-
-
 Monster fred;
+Monster jerry;
+Monster ronda;
+Monster ted;
+Monster wanda;
+
 
 
 void setup(){
   background(255);
-  size(800, 800);
-  
+  size(800,800);
 }
 
-
 void draw(){
-  fred = new Monster(?? );
+  fred = new Monster(100,400,200,200,200);
+  fred.monsterBody(20,20);
+  jerry = new Monster(200,400,10,10,10);
+  jerry.monsterBody(50,50);
+  ronda = new Monster(300,400,50,50,50);
+  ronda.monsterBody(100,100);
+  ted = new Monster(450,400,70,70,70);
+  ted.monsterBody(150,150);
+  wanda = new Monster(600,400,100,100,100);
+  wanda.monsterBody(200,200);
   
-  fred.monsterBody(??);
 }
