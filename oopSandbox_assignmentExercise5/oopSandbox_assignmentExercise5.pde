@@ -12,20 +12,31 @@ Make multiple and different monsters. Add functionality to them (and your code!)
 
 */
 
+float wanderX = 0;
+float wanderY = 0;
 
+Monster[] monsters=new Monster[5];
 
-Monster fred;
-
-
-void setup(){
-  background(255);
+void setup() {
   size(800, 800);
-  
+  for (int i=0; i<monsters.length; i++) {
+    
+    monsters[i]=new Monster(random(-200, 200),random(-200, 200),color(random(255), random(255),random(255)),color(random(255), random(255), random(255)),color(random(255), random(255), random(255)),random(100, 200),random(200, 300),int(random(100, 200)),int(random(100, 200)));
+  }
 }
 
+void draw() {
+  background(255);
+  update();
 
-void draw(){
-  fred = new Monster(?? );
-  
-  fred.monsterBody(??);
+  for (int i=0; i<monsters.length; i++) {
+    monsters[i].monsterBody();
+    monsters[i].monsterHead();
+    monsters[i].monsterEye(wanderX,wanderY);
+  }
+}
+
+void update() {
+  wanderX=map(mouseX, 0, width, -5, 5);
+  wanderY=map(mouseX, 0, width, -1, 1);
 }
