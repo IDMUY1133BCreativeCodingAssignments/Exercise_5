@@ -1,10 +1,11 @@
 class Monster {
 
   //declare variables or data types
-  private color skin1, skin2, blink, wort;    // no accessible outside the class. Only internally.
+  private color skin1, skin2, wort;    // no accessible outside the class. Only internally.
   float x, y, wanderX, wanderY, percentScale;  // accessible outside the class, using the dot syntax
   boolean button;
-  int w = 800;
+  float limitX = 5;
+  float limitY = 5; 
   // this is the class constructor. this is called with the "new" line in the main code
   Monster(float tempX, float tempY, color sk1, color sk2, color wort_) {
     println("we made a monster"); 
@@ -14,7 +15,6 @@ class Monster {
 
     skin1 = sk1;
     skin2 = sk2;
-    blink = sk1;
     wort = wort_;
     x = tempX;
     y = tempY;
@@ -34,7 +34,6 @@ class Monster {
 
 void update(){
   wanderX = map(mouseX, 0, width, -5, 5);
-  //print("wanderX is " + wanderX);
   wanderY = map(mouseX, 0, width, -1, 1);
   
 }
@@ -63,4 +62,18 @@ void update(){
   ellipse(w/2 + 25 + wX + x, w/2 - 120 + wY + y, 5, 5); //right pupil
   noFill();
   }
+  
+  void move(int upOrDown){
+    
+    if(upOrDown == 0){
+      x++;
+      //makes monsters move only a little up to down and reverse
+    }
+    
+    if(upOrDown == 1){
+      y++;
+      //makes monsters move only a little left to right and reverse
+    }
+
+}
 }
