@@ -28,7 +28,7 @@ class Monster {
   
   // this is how all baby monsters are made
   //first we start with the body 
-  void monsterBody(int wide, int tall) { 
+  void monsterBody(float wide, float tall) { 
     smooth();
 
     curve(w/2 - 100 + x, w/2-100 + y, w/2 - 50 + x, w/2-200 + y, w/2 + 10 + x, w/2 -100 + y, w/2 -20 + x, w/2 + 20 + y); //left antenna
@@ -41,7 +41,7 @@ class Monster {
   }
 
   // then we make the head
-  void head(int wid, int hei) {
+  void head(float wid, float hei) {
     fill(skin2); // lighter green
     stroke(0); 
     ellipse(w/2 + x, w/2 - 120 + y, wid, hei); //head  // 100, 80
