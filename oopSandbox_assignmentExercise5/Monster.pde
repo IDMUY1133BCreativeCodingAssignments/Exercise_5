@@ -33,22 +33,13 @@ class Monster {
     ellipse(w/2  + x, w/2 - 30 + y-65, wide/2, tall/2);  //wart
   }
 
-  void display(int t){
-    frameRate(10);
+  void display(int t) {
+
     pushMatrix();
-    translate(tempX + t, tempY + t*2);
+    translate( t, t*2);
+    translate(e, 0);
+    translate(0, e);
     popMatrix();
-  }
-  
-  void autoMove(float m) {
-    frameRate(10);
-    tempX = tempX + m;
-    if (tempX > -400) {
-      tempX = 400;  /* -200 isn't arbitrary. It's around the value
-       when the shape falls off the screen, which
-       is based on it's coordinates & graphics
-       */
-    }
   }
 
   void interact(float z) {

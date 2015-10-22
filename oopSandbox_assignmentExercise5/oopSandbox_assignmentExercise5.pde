@@ -21,8 +21,6 @@ Monster fred, jerry, ronda, chelsea, julia;
 void setup() {
   background(255);
   size(800, 800);
-
-
 }
 
 void draw() {
@@ -38,7 +36,6 @@ void draw() {
   julia.monsterBody(-200, -150, 100, 100);
 
 
-  chelsea.display(20);
-  julia.interact(5);
-
+  chelsea.display(200);
+  chelsea.interact(5);
 }
