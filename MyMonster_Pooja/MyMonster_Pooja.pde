@@ -15,9 +15,9 @@ void draw() {
     
     background(255);
  
-    blue = new MonsterBody(-200, -25, 500, 500, sk1,sk2);
-    red = new MonsterBody(300, 25, 200, 500, sk1,sk2);
-    yellow = new MonsterBody(300, 25, 200, 500, sk1,sk2);
+    blue = new MonsterBody(-250, 25, 500, 500);
+    red = new MonsterBody(50, 25, 200, 500);
+    yellow = new MonsterBody(300, 25, 200, 500);
 }
 
 // Where should functions be placed?

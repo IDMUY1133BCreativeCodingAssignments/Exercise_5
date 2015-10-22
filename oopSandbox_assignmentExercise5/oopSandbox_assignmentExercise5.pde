@@ -15,25 +15,30 @@
 
 //ADD ARRAYS
 
-Monster fred, jerry, ronda;
-Agent ted;
+Monster fred, jerry, ronda, chelsea, julia;
+
 
 void setup() {
   background(255);
   size(800, 800);
 
-  ted = new Agent(50, 50, 100, 100);
+
 }
 
 void draw() {
   fred = new Monster(100, 100);
   fred.monsterBody(0, 0, 20, 20);
   jerry = new Monster(100, 100);
-  jerry.monsterBody(100, 100, 50, 200);
+  jerry.monsterBody(200, 100, 50, 200);
   ronda = new Monster(150, 150);
   ronda.monsterBody(-200, 300, 200, 100);
+  chelsea = new Monster(150, 150);
+  chelsea.monsterBody(120, 300, 100, 300);
+  julia = new Monster(150, 150);
+  julia.monsterBody(-200, -150, 100, 100);
 
-  ted.autoMove(8);
-  ted.interact(1);
-  ted.display();
+
+  chelsea.display(20);
+  julia.interact(5);
+
 }
