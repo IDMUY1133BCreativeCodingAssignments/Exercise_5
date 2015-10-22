@@ -37,8 +37,6 @@ class Monster {
 
     pushMatrix();
     translate( t, t*2);
-    translate(e, 0);
-    translate(0, e);
     popMatrix();
   }
 
