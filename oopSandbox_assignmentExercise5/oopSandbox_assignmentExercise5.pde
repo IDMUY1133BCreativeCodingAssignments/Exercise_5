@@ -21,21 +21,28 @@ Monster fred, jerry, ronda, chelsea, julia;
 void setup() {
   background(255);
   size(800, 800);
+
+  fred = new Monster();
+  jerry = new Monster();
+  ronda = new Monster();
+  chelsea = new Monster();
+  julia = new Monster();
 }
 
 void draw() {
-  fred = new Monster(100, 100);
-  fred.monsterBody(0, 0, 20, 20);
-  jerry = new Monster(100, 100);
-  jerry.monsterBody(200, 100, 50, 200);
-  ronda = new Monster(150, 150);
-  ronda.monsterBody(-200, 300, 200, 100);
-  chelsea = new Monster(150, 150);
-  chelsea.monsterBody(120, 300, 100, 300);
-  julia = new Monster(150, 150);
-  julia.monsterBody(-200, -150, 100, 100);
 
+  fred.monsterBody(20, 20);
+  fred.update();
 
-  chelsea.display(200);
-  chelsea.interact(5);
+  jerry.monsterBody( 50, 200);
+  jerry.update();
+
+  ronda.monsterBody( 200, 100);
+  ronda.update();
+
+  chelsea.monsterBody( 100, 300);
+  chelsea.update();
+
+  julia.monsterBody( 100, 100);
+  julia.update();
 }

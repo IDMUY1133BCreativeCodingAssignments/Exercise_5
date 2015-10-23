@@ -1,7 +1,7 @@
 class MonsterBody {
-
+  
   //declare variables or data types
-
+  float x,y;
   int skin1 = color(random(255), random(255), random(255));
   int skin2 = color(random(255), random(255), random(255));
   int skin3 = color(random(255), random(255), random(255));
@@ -9,8 +9,8 @@ class MonsterBody {
   int skin5 = color(random(255), random(255), random(255));
   int skin6 = color(random(255), random(255), random(255));
   int skin7 = color(random(255), random(255), random(255));
-
-  MonsterBody(int x, int y, int wid, int hei) {  // feel free to rename these functions
+  
+  MonsterBody(float x,float y, int wid, int hei) {  // feel free to rename these functions
     frameRate(0);
 
     fill(skin1);
@@ -33,5 +33,22 @@ class MonsterBody {
     line(450+x, 250+y, 550+x, 250+y);  //mouth
     fill(skin7);
     quad(500+x, 350+y, 550+x, 400+y, 500+x, 450+y, 450+x, 400+y);
+  }
+
+  void interact(float z) {
+    if (keyPressed) {
+      if (key == 'l') {
+        x = x -z;
+      }
+      if (key == 'u') {
+        y = y + z;
+      }
+    }
+  }
+
+  void move() {
+    if (mousePressed) {
+      translate(random(-400, 400), random(-400, 400));
+    }
   }
 }
